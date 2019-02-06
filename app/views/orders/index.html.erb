@@ -1,1 +1,28 @@
 <h1 class="title">Orders index</h1>
+
+<section class="section">
+  <div class="container">
+    <% @orders.each do |order| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">
+                <%= link_to order.date, order %>
+              </p>
+            </div>
+          </div>
+          <div class="person">
+            <%= order.person %>
+          </div>
+          <div class="status">
+            <span class="tag is-rounded">
+              <% #order.status %>
+              active
+            </span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
