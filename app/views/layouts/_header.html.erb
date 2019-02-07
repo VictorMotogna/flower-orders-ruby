@@ -22,7 +22,11 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        <%= yield :page_title %>
+        <% if content_for?(:page_title) %>
+        <div>
+          <%= yield :page_title %>
+          <% end %>
+        </div>
       </h1>
     </div>
   </div>
