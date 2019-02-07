@@ -1,0 +1,17 @@
+- content_for :page_title, "Orders Index"
+%section.section
+  .container
+    - @orders.each do |order|
+      .card
+        .card-content
+          .media
+            .media-content
+              %p.title.is-4
+                = link_to order.date, order
+          .person
+            = order.person
+          %br/
+          .status
+            %span.tag.is-rounded
+              - #order.status - todo: will be implemented later
+              active

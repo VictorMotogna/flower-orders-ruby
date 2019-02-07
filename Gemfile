@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bulma-rails', '~> 0.7.2'
 gem 'simple_form', '~> 4.1'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
