@@ -1,0 +1,17 @@
+<div class="box">
+  <article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong>
+            <%= flower.name %>
+          </strong>
+          - <%= flower.color %>
+          - <%= flower.number %>
+        </p>
+      </div>
+    </div>
+
+    <%= link_to 'Delete', [flower.order, flower], method: :delete, class: "button is-danger", data: { confirm: "Are you sure?" } %>
+  </article>
+</div>

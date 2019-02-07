@@ -1,0 +1,23 @@
+
+<%= simple_form_for([@order, @order.flowers.build]) do |f| %>
+  <div class="field">
+    <div class="control">
+      <%= f.input :name, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :color, input_html: { class: 'input' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+
+  <div class="field">
+    <div class="control">
+      <%= f.input :number, input_html: { class: 'number', type: 'number' }, wrapper: false, label_html: { class: 'label' } %>
+    </div>
+  </div>
+  
+  <%= f.button :submit, class: "button is-primary" %>
+<% end %>
+</div>

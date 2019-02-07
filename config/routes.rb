@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  resources :orders
+  resources :orders do
+    resources :flowers
+  end
+  
   root "orders#index"
 end
