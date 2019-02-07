@@ -1,0 +1,12 @@
+<% content_for :page_title, @order.date %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      <%= @order.date %>
+    </h1>
+    <div class="content">
+      <%= @order.person %> @ <%= @order.date %>
+    </div>
+  </div>
+</section>
