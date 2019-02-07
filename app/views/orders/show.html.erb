@@ -29,3 +29,22 @@
     </div>
   </div>
 </section>
+
+<section class="section flowers">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong>
+        <%= @order.flowers.count %>
+      </strong>
+      Flowers
+    </h2>
+    <%= render @order.flowers %>
+    <div class="form">
+      <hr />
+      <h3 class="subtitle is-3">
+        Add a flower to the order
+        <%= render 'flowers/form' %>
+      </h3>
+    </div>
+  </div>
+</section>
