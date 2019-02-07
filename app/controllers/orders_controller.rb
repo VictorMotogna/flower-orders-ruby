@@ -1,7 +1,12 @@
 class OrdersController < ApplicationController
 
+  before_action :find_order, only: [:show, :update, :edit, :destroy]
+
   def index
-    @orders = Order.all
+    @orders = Order.all.order(date: :desc)
+  end
+
+  def show
   end
 
   def new
@@ -18,8 +23,20 @@ class OrdersController < ApplicationController
     end
   end
 
-  def show
-    @order = Order.find(params[:id])
+  def edit
+  end
+
+  def update
+    if @order.update(order_params)
+      redirect_to @order
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @order.destroy
+    redirect_to orders_path
   end
 
   private
@@ -27,4 +44,7 @@ class OrdersController < ApplicationController
       params.require(:order).permit(:date, :person)
     end
 
+    def find_order
+      @order = Order.find(params[:id])
+    end
 end
