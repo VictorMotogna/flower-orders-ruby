@@ -1,5 +1,16 @@
 class Api::V1::FlowersController < ApplicationController
 
+  before_action :find_flower, only: [:show]
+
+  def index
+    @flowers = Flower.all
+    render json: @flowers, status: :ok
+  end
+
+  def show
+    render json: @flower, status: :ok
+  end
+
   def add_to_order
     flower = Flower.new(flower_params)
     if flower.save!

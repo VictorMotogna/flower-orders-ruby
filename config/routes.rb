@@ -14,8 +14,12 @@ Rails.application.routes.draw do
         end
       end
       resources :flowers do
+        member do
+          get :show
+        end
         collection do
           post :add_to_order
+          get :index
         end
       end
     end
