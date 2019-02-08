@@ -1,0 +1,32 @@
+- content_for :page_title, @order.date
+%section.section
+  .container
+    %nav.level
+      / Left side
+      .level-left
+        %p.level-item
+          %strong
+            Actions
+      / Right side
+      .level-right
+        %p.level-item
+          = link_to "Edit", edit_order_path(@order), class: "button"
+        %p.level-item
+          = link_to "Delete", order_path(@order), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-danger"
+    %hr/
+    .content
+      .content
+        = @order.person
+        @ #{@order.date}
+%section.section.flowers
+  .container
+    %h2.subtitle.is-5
+      %strong
+        = @order.flowers.count
+      Flowers
+    = render @order.flowers
+    .form
+      %hr/
+      %h3.subtitle.is-3
+        Add a flower to the order
+        \#{render 'flowers/form'}

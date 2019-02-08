@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   before_action :find_order, only: [:show, :update, :edit, :destroy]
 
   def index
-    @orders = Order.all.order(date: :desc)
+    @orders = Order.order(date: :asc)
   end
 
   def show

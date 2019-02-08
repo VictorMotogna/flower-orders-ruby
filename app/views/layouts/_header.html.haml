@@ -1,0 +1,19 @@
+%section.hero.is-primary.is-medium
+  .hero-head
+    %nav.navbar
+      .container
+        .navbar-brand
+          = link_to 'Flower App', root_path, class: "navbar-item"
+          %span.navbar-burger.burger
+            %span
+            %span
+            %span
+        #navbarMenuHeroA.navbar-menu
+          .navbar-end
+            = link_to "Create new order", new_order_path, class: "navbar-item"
+  .hero-body
+    .container.has-text-centered
+      %h1.title
+        - if content_for?(:page_title)
+          %div
+            = yield :page_title
