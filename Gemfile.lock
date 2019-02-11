@@ -56,6 +56,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
+    apipie-rails (0.5.15)
+      rails (>= 4.1)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -253,6 +255,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  apipie-rails
   better_errors (~> 2.5)
   bootsnap (>= 1.1.0)
   bulma-rails (~> 0.7.2)

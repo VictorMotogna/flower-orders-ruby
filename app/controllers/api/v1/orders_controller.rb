@@ -1,8 +1,8 @@
 class Api::V1::OrdersController < ApplicationController
+  include Api::V1::OrdersControllerDoc
 
   before_action :find_order, only: [:show, :update, :destroy]
   
-
   def index
     @orders = Order.order(date: :asc)
     render json: @orders, each_serializer: OrdersSerializer, root: false
