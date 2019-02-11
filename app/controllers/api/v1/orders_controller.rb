@@ -5,11 +5,11 @@ class Api::V1::OrdersController < ApplicationController
 
   def index
     @orders = Order.order(date: :asc)
-    render json: @orders, status: :ok, each_serializer: OrdersSerializer, root: false
+    render json: @orders, each_serializer: OrdersSerializer, root: false
   end
 
   def show
-    render json: @order, status: :ok, serializer: OrdersSerializer
+    render json: @order, serializer: OrdersSerializer
   end
 
   def update
@@ -22,7 +22,7 @@ class Api::V1::OrdersController < ApplicationController
 
   def destroy
     if @order.destroy!
-      render json: { message: "Deleted successfuly!" }, status: :ok
+      render json: { message: "Deleted successfuly!" }
     else
       render nothing: true, status: :bad_request
     end
@@ -32,7 +32,7 @@ class Api::V1::OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     if @order.save
-      render json: @order, status: :ok, serializer: OrdersSerializer
+      render json: @order, serializer: OrdersSerializer
     else
       render nothing: true, status: :bad_request
     end

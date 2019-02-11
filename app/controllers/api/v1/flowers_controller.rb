@@ -4,11 +4,11 @@ class Api::V1::FlowersController < ApplicationController
 
   def index
     @flowers = Flower.all
-    render json: @flowers, status: :ok, each_serializer: FlowersSerializer, root: false
+    render json: @flowers, each_serializer: FlowersSerializer, root: false
   end
 
   def show
-    render json: @flower, status: :ok, serializer: FlowersSerializer
+    render json: @flower, serializer: FlowersSerializer
   end
 
   def add_to_order
