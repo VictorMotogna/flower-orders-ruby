@@ -40,6 +40,8 @@ gem 'bulma-rails', '~> 0.7.2'
 gem 'simple_form', '~> 4.1'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 
+gem 'active_model_serializers'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
