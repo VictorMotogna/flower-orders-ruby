@@ -1,5 +1,5 @@
 class Api::V1::OrdersController < ApplicationController
-
+  before_action :doorkeeper_authorize!
   before_action :find_order, only: [:show, :update, :destroy]
   
 
