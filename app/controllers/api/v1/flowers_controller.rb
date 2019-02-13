@@ -1,5 +1,5 @@
 class Api::V1::FlowersController < ApplicationController
-
+  before_action :doorkeeper_authorize!
   before_action :find_flower, only: [:show]
 
   def index

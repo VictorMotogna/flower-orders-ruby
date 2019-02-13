@@ -1,0 +1,51 @@
+{
+  "orders#index": [{
+    "verb": "GET",
+    "path": "/api/v1/orders",
+    "versions": [
+      "1.0"
+    ],
+    "query": null,
+    "request_data": null,
+    "response_data": [{
+        "id": 1,
+        "date": "2019-10-10",
+        "person": "Alin",
+        "flowers": [{
+            "id": 1,
+            "name": "Rose",
+            "color": "purple",
+            "number": 2
+          },
+          {
+            "id": 1,
+            "name": "Rose",
+            "color": "purple",
+            "number": 2
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "date": "2019-10-10",
+        "person": "Alin",
+        "flowers": []
+      },
+      {
+        "id": 3,
+        "date": "2019-10-10",
+        "person": "Alin",
+        "flowers": []
+      },
+      {
+        "id": 4,
+        "date": "2019-10-10",
+        "person": "Alin",
+        "flowers": []
+      }
+    ],
+    "code": 200,
+    "show_in_doc": 1,
+    "recorded": true
+  }]
+}

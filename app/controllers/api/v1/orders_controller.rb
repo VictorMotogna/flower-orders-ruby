@@ -1,6 +1,7 @@
 class Api::V1::OrdersController < ApplicationController
   include Api::V1::OrdersControllerDoc
 
+  before_action :doorkeeper_authorize!
   before_action :find_order, only: [:show, :update, :destroy]
   
   def index
